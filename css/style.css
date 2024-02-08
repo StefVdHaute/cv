@@ -1,0 +1,139 @@
+:root {
+    --KSA-blue: #006699;
+    --KSA-orange: #ff6633;
+    --KSA-red: #e43137;
+    --KSA-blue-historical: #3c84b2;
+    --KSA-orange-historical: #fcab37;
+
+    --primary-color: var(--KSA-blue-historical);
+    --secondary-color: #333;
+}
+
+@page {
+    margin: 0; /* Removes the page title and link when printing */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    line-height: 1.2;
+}
+
+header {
+    margin-top: -2rem;
+    text-align: right;
+}
+
+.name > span:first-child {
+    color: var(--secondary-color);
+}
+
+.name > span:last-child {
+    color: var(--primary-color);
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+header > p {
+    margin: 0;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 0.7rem;
+    margin-bottom: -0.5rem;
+}
+
+.section h2 {
+    border-bottom: 0.1rem solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+.section ul li {
+    margin-bottom: 0.2rem;
+}
+
+/*********
+* CUSTOM *
+*********/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.record {
+    display: flex;
+    justify-content: space-between;
+}
+
+.record > span:first-child {
+    font-weight: bold;
+}
+
+.record > span:first-child::after {
+    content: '-';
+    margin: 0.5em;
+}
+
+.duo > span::after {
+    display: none;
+}
+
+.record > span:last-child {
+    margin-left: auto;
+}
+
+.split-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.split-list li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    margin: 0.2rem 0 0 0;
+}
+
+.split-list li:nth-child(3n) {
+    margin-right: 0;
+}
+
+@media screen {
+    body {
+        background-color: #f4f4f4;
+    }
+}
+
+@media screen and (min-width:70rem) {
+    body {
+        margin: auto;
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width:90rem) {
+    body {
+        margin: auto;
+        max-width: 70%;
+    }
+}
+
+@media print {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
