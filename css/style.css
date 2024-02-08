@@ -9,10 +9,6 @@
     --secondary-color: #333;
 }
 
-@page {
-    margin: 0; /* Removes the page title and link when printing */
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -95,6 +91,10 @@ h2 {
     margin-left: auto;
 }
 
+.thin-list {
+    width: 50%;
+}
+
 .split-list {
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +103,7 @@ h2 {
 .split-list li {
     display: inline-block;
     box-sizing: border-box;
-    width: 25%;
+    width: 30%;
     margin: 0.2rem 0 0 0;
 }
 
@@ -117,14 +117,14 @@ h2 {
     }
 }
 
-@media screen and (min-width:70rem) {
+@media screen and (min-width: 70rem) {
     body {
         margin: auto;
         max-width: 80%;
     }
 }
 
-@media screen and (min-width:90rem) {
+@media screen and (min-width: 90rem) {
     body {
         margin: auto;
         max-width: 70%;
@@ -132,6 +132,10 @@ h2 {
 }
 
 @media print {
+    section {
+        page-break-inside: avoid;
+    }
+
     a {
         color: inherit;
         text-decoration: none;
