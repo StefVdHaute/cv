@@ -37,6 +37,34 @@ header > p {
     margin: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 1rem;
+    width: 30%;
+}
+
+.left-main::after {
+    content: '';
+    display: block;
+    width: 1px;
+    background-color: black;
+    margin: 0.5rem 0;
+    align-self: stretch;
+}
+
+.right-main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
 h2 {
     color: var(--primary-color);
     margin-top: 0.7rem;
@@ -51,16 +79,13 @@ h2 {
 .section ul {
     list-style-type: none;
     padding-left: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    width: 100%;
 }
 
 .section ul li {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
 }
-
-/*********
-* CUSTOM *
-*********/
 
 .row {
     display: flex;
@@ -72,30 +97,24 @@ h2 {
 .record {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.4rem;
 }
 
 .record > span:first-child {
     font-weight: bold;
 }
 
-.record > span:first-child::after {
+.record > span:not(:last-child):nth-child(2)::before {
     content: '-';
     margin: 0.5em;
-}
-
-.duo > span::after {
-    display: none;
 }
 
 .record > span:last-child {
     margin-left: auto;
 }
 
-.thin-list {
-    width: 50%;
-}
-
 .split-list {
+    margin: 0.4rem 0 0 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -131,7 +150,17 @@ h2 {
     }
 }
 
+@media screen and (max-width: 70rem) {
+    .split-list li {
+        width: 50%;
+    }
+}
+
 @media print {
+    body {
+        padding: 2rem 0 0;
+        margin: 0;
+    }
     section {
         page-break-inside: avoid;
     }
@@ -139,6 +168,10 @@ h2 {
     a {
         color: inherit;
         text-decoration: none;
+    }
+
+    .split-list li {
+        width: 50%;
     }
 
     .print-hide {
