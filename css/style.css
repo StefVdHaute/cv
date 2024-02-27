@@ -46,17 +46,11 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-right: 1rem;
     width: 30%;
-}
 
-.left-main::after {
-    content: '';
-    display: block;
-    width: 1px;
-    background-color: black;
-    margin: 0.5rem 0;
-    align-self: stretch;
+    border-right: 0.1rem solid #ccc;
+    padding-right: 1rem;
+    margin-right: 1rem;
 }
 
 .right-main {
