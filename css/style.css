@@ -140,4 +140,8 @@ h2 {
         color: inherit;
         text-decoration: none;
     }
+
+    .print-hide {
+        display: none;
+    }
 }
