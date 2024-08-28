@@ -81,6 +81,10 @@ h2 {
     margin-bottom: 0.3rem;
 }
 
+.left-main .section li ul {
+    margin-top: 0.6rem;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
